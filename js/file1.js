@@ -1,5 +1,5 @@
 var billTotal;
-
+//no CSS Version 1.0
 const eraseErr = () => {
     cc.HTML.replace('err', '');
 }
