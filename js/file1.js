@@ -20,14 +20,17 @@ const calculateTipCustom = (perc) => {
     }
 };
 const custom = () => {
-    document.getElementById('tipButtons').innerHTML=document.getElementById('customTip').innerHTML;
+    //document.getElementById('tipButtons').innerHTML=document.getElementById('customTip').innerHTML;
+    cc.HTML.replace('tipButtons', cc.HTML.value('customTip', 'html'));
 };
 
 const backBut = () => {
-    document.getElementById('tipButtons').innerHTML=document.getElementById('backBut').innerHTML;
+    //document.getElementById('tipButtons').innerHTML=document.getElementById('backBut').innerHTML;
+    cc.HTML.replace('tipButtons', cc.HTML.value('backBut', 'html'));
 }
 
 const checkJavascript = () => {
-    document.getElementById('js').innerHTML="Javscript is Working!";
-    document.getElementById('js').style="color: green;";  
+    //document.getElementById('js').innerHTML="Javscript is Working!";
+    cc.HTML.replace('js', 'Javascript is Working!');
+    document.getElementById('js').style="color: green;"; 
 };
