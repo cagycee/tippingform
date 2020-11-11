@@ -9,10 +9,20 @@
 </head>
 <body>
     <h2>Tipping Calculator Form</h2>
-    <p class="field">Bill Total: <input type="number" /></p>
-    <span><button>18%</button> | <button>10%</button> <button>15%</button> <button>25%</button></span>
+    <p class="field">Bill Total: <input id="tipvalue" type="number" /></p>
+    <p>
+        <button onclick="calculateTip(.18);">18%</button> (Recommended) | 
+        <button onclick="calculateTip(.10);">10%</button> 
+        <button onclick="calculateTip(.15);">15%</button> 
+        <button onclick="calculateTip(.25);">25%</button>
+    </p>
+    <span>
+        <button onclick="alert(`WIP`);">Custom</button>
+    </span>
     <hr />
-    <p><span><b>JavaScript: </b></span><span id="js" style="color: red;">loading</span></p>
+    <p>
+        <span><b>JavaScript: </b></span><span id="js" style="color: #000;">loading</span>
+    </p>
     <script>setInterval(checkJavascript, 3000);</script>
 </body>
 </html>
