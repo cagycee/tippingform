@@ -10,20 +10,33 @@
 </head>
 <body>
     <h2>Tipping Calculator Form</h2>
-    <p class="field">Bill Total: <input id="tipvalue" type="number" /></p>
-    <p>
+    <p class="field">Bill Total: <span style="color: green;">$</span><input id="tipvalue" type="number" /></p>
+    <p id="tipButtons">
         <button onclick="calculateTip(.18);">18%</button> (Recommended) | 
         <button onclick="calculateTip(.10);">10%</button> 
         <button onclick="calculateTip(.15);">15%</button> 
         <button onclick="calculateTip(.25);">25%</button>
+        <button onclick="custom();">Custom</button>
     </p>
     <span>
-        <button onclick="alert(`WIP`);">Custom</button>
+        
     </span>
     <hr />
     <p>
-        <span><b>JavaScript: </b></span><span id="js" style="color: #000;">loading</span>
+        <span><b>Tip: </b></span>
+        <span id="tipAmount" style="color: green;">$0.00</span>
     </p>
-    <script>setInterval(checkJavascript, 3000);</script>
+    <script id="customTip" type="text/html">
+        <input id="cTip" type="number" value="18" /> <span style="font-size: 7pt;">% </span> | <button onclick="calculateTipCustom();">GO!</button>
+        <br>
+        <button onclick="backBut();">Back</button>
+    </script>
+    <script id="backBut" type="text/html">
+        <button onclick="calculateTip(.18);">18%</button> (Recommended) | 
+        <button onclick="calculateTip(.10);">10%</button> 
+        <button onclick="calculateTip(.15);">15%</button> 
+        <button onclick="calculateTip(.25);">25%</button>
+        <button onclick="custom();">Custom</button>
+    </script>
 </body>
 </html>

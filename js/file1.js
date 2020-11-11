@@ -3,15 +3,28 @@ const calculateTip = (perc) => {
     billTotal = document.getElementById("tipvalue").value;
     if (billTotal > 0) {
         //var tip = Math.round((billTotal * perc * 100)) / 100;
-        var tip = cc.Math.roundToCx((billTotal*perc), 100);
-        alert(`You should tip ${tip}!`);
+        var tip = billTotal*perc;
+        document.getElementById('tipAmount').innerHTML=`$${tip.toFixed(2)}`;
     } else {
         alert('Bill Total Value is empty!');
     }
 };
-
+const calculateTipCustom = (perc) => {
+    billTotal = document.getElementById("tipvalue").value;
+    customBillTotal = document.getElementById("cTip").value / 100;
+    if (billTotal > 0 && customBillTotal > 0) {
+        var tip = billTotal*customBillTotal;
+        document.getElementById('tipAmount').innerHTML=`$${tip.toFixed(2)}`;
+    } else {
+        alert('Bill Total Value is empty!');
+    }
+};
 const custom = () => {
-    
+    document.getElementById('tipButtons').innerHTML=document.getElementById('customTip').innerHTML;
+};
+
+const backBut = () => {
+    document.getElementById('tipButtons').innerHTML=document.getElementById('backBut').innerHTML;
 }
 
 const checkJavascript = () => {
