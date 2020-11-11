@@ -2,7 +2,8 @@ var billTotal;
 const calculateTip = (perc) => {
     billTotal = document.getElementById("tipvalue").value;
     if (billTotal > 0) {
-        var tip = Math.round((billTotal * perc * 100)) / 100;
+        //var tip = Math.round((billTotal * perc * 100)) / 100;
+        var tip = cc.Math.roundToCx((billTotal*perc), 100);
         alert(`You should tip ${tip}!`);
     } else {
         alert('Bill Total Value is empty!');
